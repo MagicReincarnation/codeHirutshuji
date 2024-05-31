@@ -1,1 +1,19 @@
-  <span id='pemberitahuan_Admin'></span>
+letakan di kode halaman profile, 
+cari let pemberitahuan_user = false;
+
+dan letakan kode ini dibawahnya.
+
+let khusus_dan_umum = true; /* false: tampilkan pesan khusus dan umum bersamaan.
+true : hanya pesan khusus.*/
+
+
+lalu 
+cari kode ini 
+   <span class='data-user'>
+    <span class='Ndata'>Level:
+  <span id='profile-level'></span></span>
+  <span id='profile-bebas2'></span>
+     </span>
+
+letakan ini <span id='pemberitahuan_Admin'></span>
+   diatas id='profile-bebas2'
