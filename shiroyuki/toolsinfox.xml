@@ -1,13 +1,16 @@
-letakan di kode halaman profile, 
+langka pertama
+
+cari kode dihalaman profile, 
 cari let pemberitahuan_user = false;
 
-dan letakan kode ini dibawahnya.
+dan letakan kode ini dibawah kode tadi.
 
 let khusus_dan_umum = true; /* false: tampilkan pesan khusus dan umum bersamaan.
 true : hanya pesan khusus.*/
 
 
-lalu 
+langka kedua, masih dihalaman profile
+
 cari kode ini 
    <span class='data-user'>
     <span class='Ndata'>Level:
@@ -17,3 +20,14 @@ cari kode ini
 
 letakan ini <span id='pemberitahuan_Admin'></span>
    diatas id='profile-bebas2'
+
+langka ketiga pergi ke edit tema dan cari link https://cdn.jsdelivr.net/gh/MagicReincarnation/codeHirutshuji@main/shiroyuki/tampilkanInfo.js
+
+dan ganti link tersebut dengan link ini 
+https://cdn.jsdelivr.net/gh/MagicReincarnation/codeHirutshuji@main/shiroyuki/toolsInfov2.js
+
+
+
+note:
+kalau susah carinya cukup cari singkatannya aja contoh tampilkanInfo.js jika sudah ketemu ganti aja linknya.
+
