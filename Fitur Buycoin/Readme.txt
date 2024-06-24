@@ -10,3 +10,6 @@
 
 13 sabtu, juni 2024
 + menambahkan file dasboard admin
+
+25 selasa, juni 2024
++ update dashboard Admin (pencegahan bug coin)
