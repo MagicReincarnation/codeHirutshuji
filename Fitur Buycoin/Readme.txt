@@ -13,3 +13,6 @@
 
 25 selasa, juni 2024
 + update dashboard Admin (pencegahan bug coin)
+
+26 jumat, july 2024
++ Menambahkan versi tanpa bot telegram
