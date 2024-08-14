@@ -16,3 +16,6 @@
 
 26 jumat, july 2024
 + Menambahkan versi tanpa bot telegram
+
+14 rabu, agustus 2024
++ update v2.0 
