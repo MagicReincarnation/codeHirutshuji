@@ -1,115 +1,12 @@
-<post>
-    <id>1</id>
-    <title>Post Title 1</title>
-    <date>2023-08-19</date>
-    <author>Author 1</author>
-    <content>This is the full content of the first post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Runner for HTML, CSS, and JS</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/theme/material.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-        .editor-container {
-            margin-bottom: 20px;
-        }
-        .editor-title {
-            margin: 5px 0;
-        }
-        #output-container {
-            width: 100%;
-            height: 300px;
-            border: 1px solid #ccc;
-        }
-    </style>
-</head>
-<body>
-    <h1>Code Runner for HTML, CSS, and JS</h1>
-
-    <div class="editor-container">
-        <h3 class="editor-title">HTML</h3>
-        <textarea id="html-editor"><h1>letakan html disni</h1>
-        </textarea>
-    </div>
-
-    <div class="editor-container">
-        <h3 class="editor-title">CSS</h3>
-        <textarea id="css-editor">h1 { color: red; }</textarea>
-    </div>
-
-    <div class="editor-container">
-        <h3 class="editor-title">JavaScript</h3>
-        <textarea id="js-editor">alert("Hello, World!");</textarea>
-    </div>
-
-    <button id="run-button">Run</button>
-    <iframe id="output-container"></iframe>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/css/css.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/javascript/javascript.min.js"></script>
-    <script>
-        // Inisialisasi CodeMirror untuk masing-masing editor
-        var htmlEditor = CodeMirror.fromTextArea(document.getElementById("html-editor"), {
-            lineNumbers: true,
-            mode: "htmlmixed",
-            theme: "material"
-        });
-
-        var cssEditor = CodeMirror.fromTextArea(document.getElementById("css-editor"), {
-            lineNumbers: true,
-            mode: "css",
-            theme: "material"
-        });
-
-        var jsEditor = CodeMirror.fromTextArea(document.getElementById("js-editor"), {
-            lineNumbers: true,
-            mode: "javascript",
-            theme: "material"
-        });
-        
-        document.getElementById("run-button").addEventListener("click", function() {
-            var htmlCode = htmlEditor.getValue();
-            var cssCode = cssEditor.getValue();
-            var jsCode = jsEditor.getValue();
-
-            var output = document.getElementById("output-container");
-            var documentContent = `
-                <html>
-                <head>
-                    <style>${cssCode}</style>
-                </head>
-                <body>
-                    ${htmlCode}
-                    <script>${jsCode}<\/script>
-                </body>
-                </html>
-            `;
-
-            output.srcdoc = documentContent;
-        });
-    </script>
-    
-    <span label-td="Result" data-text="{number} Results">bbb</span>
-<span label-td="Result" data-text="{number} Items"></span>
-<span label-td="Result" data-text="{number} Entries"></span>
-
-<script>
-var result_e = document.querySelectorAll('span[label-td="Result"]');
-result_e.forEach(function(e) {
-var text = e.getAttribute('data-text');
-var updatedText = text.replace('{number}', 89);
- e.setAttribute('result', updatedText);
-    });
-</script>
-</body>
-</html></content>
-</post>
+<div class="post-title">Post Title 1</div>
+<div class="post-date">2023-08-19</div>
+<div class="post-author">Author 1</div>
+<div class="post-content">
+    <p>This is the full content of the first post. You can add any HTML here.</p>
+    <img src="https://via.placeholder.com/150" alt="Example Image">
+    <video controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <button onclick="alert('Button Clicked!')">Click Me</button>
+</div>
