@@ -1,40 +1,39 @@
 <div class="post-title">Postt Dokumentasi</div>
 <div class="post-date">2024/08/23</div>
 <div class="post-author">Hirutshujj</div>
-<div class="post-content">
-    <h1>Heading 1</h1>
-    <p>Heading 1 biasanya digunakan untuk judul utama dalam sebuah posting.</p>
+<div class="post-content space-y-6">
+    <h1 class="text-4xl font-bold mb-4">Heading 1</h1>
+    <p>Heading 1 digunakan sebagai judul utama dalam sebuah postingan.</p>
     
-    <h2>Heading 2</h2>
-    <p>Heading 2 digunakan untuk subjudul atau bagian penting dalam konten.</p>
+    <h2 class="text-3xl font-semibold mb-4">Heading 2</h2>
+    <p>Heading 2 biasanya digunakan untuk subjudul atau bagian utama dalam konten.</p>
     
-    <h3>Heading 3</h3>
-    <p>Heading 3 sering digunakan untuk sub-bagian yang lebih spesifik di dalam sebuah bagian.</p>
+    <h3 class="text-2xl font-semibold mb-4">Heading 3</h3>
+    <p>Heading 3 sering digunakan untuk sub-bagian dari Heading 2.</p>
     
-    <h4>Heading 4</h4>
-    <p>Heading 4 biasanya digunakan untuk topik atau sub-sub-bagian tertentu.</p>
+    <h4 class="text-xl font-semibold mb-4">Heading 4</h4>
+    <p>Heading 4 dapat digunakan untuk bagian yang lebih spesifik di dalam Heading 3.</p>
     
-    <h5>Heading 5</h5>
-    <p>Heading 5 jarang digunakan tetapi berguna untuk detail lebih kecil dalam struktur konten.</p>
+    <h5 class="text-lg font-semibold mb-4">Heading 5</h5>
+    <p>Heading 5 sering digunakan untuk detail yang lebih kecil atau tambahan informasi.</p>
     
-    <h6>Heading 6</h6>
-    <p>Heading 6 adalah level heading terendah yang bisa digunakan untuk informasi kecil atau catatan tambahan.</p>
-    
-    <p><b>Bold Text:</b> Digunakan untuk menyoroti teks yang penting atau ditekankan.</p>
-    <p><i>Italic Text:</i> Digunakan untuk menyoroti teks secara miring.</p>
-    <p><u>Underlined Text:</u> Digunakan untuk menyoroti teks dengan garis bawah.</p>
+    <h6 class="text-base font-semibold mb-4">Heading 6</h6>
+    <p>Heading 6 biasanya digunakan untuk teks yang ingin ditekankan tetapi tidak terlalu penting dalam hierarki.</p>
 
-    <p>Ini adalah <mark>highlighted text</mark> menggunakan tag <code>&lt;mark&gt;</code>.</p>
+    <p class="font-bold">Bold Text: Teks ini digunakan untuk penekanan atau sorotan penting.</p>
+    <p class="italic">Italic Text: Teks ini digunakan untuk penekanan dengan gaya miring.</p>
+    <p class="underline">Underlined Text: Teks ini digunakan dengan garis bawah untuk penekanan.</p>
+    <p>Ini adalah <mark class="bg-yellow-200">highlighted text</mark> menggunakan tag <code>&lt;mark&gt;</code>.</p>
 
-    <p>Berikut ini adalah link: <a href="https://example.com" target="_blank" rel="noopener noreferrer">Klik di sini</a> untuk membuka halaman baru.</p>
+    <p>Berikut ini adalah link: <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Klik di sini</a> untuk membuka halaman baru.</p>
     
-    <blockquote>
+    <blockquote class="border-l-4 border-blue-500 pl-4 italic text-gray-600">
         "Ini adalah blockquote. Digunakan untuk menampilkan kutipan atau pernyataan khusus dari sumber lain."
     </blockquote>
 
-    <p>Ini adalah contoh paragraf dengan teks normal. Paragraf digunakan untuk menulis konten dalam bentuk teks yang lebih panjang.</p>
-    
-    <pre>
+    <p class="mb-4">Ini adalah contoh paragraf dengan teks normal. Paragraf digunakan untuk menulis konten dalam bentuk teks yang lebih panjang.</p>
+
+    <pre class="bg-gray-900 text-white p-4 rounded">
         <code>
             // Ini adalah contoh kode
             const example = "Hello, world!";
@@ -43,17 +42,17 @@
     </pre>
 
     <p>Berikut ini adalah input field:</p>
-    <input type="text" placeholder="Enter your text here" class="border p-2 rounded">
+    <input type="text" placeholder="Enter your text here" class="border p-2 rounded w-full mb-4">
 
     <p>Berikut ini adalah textarea untuk menulis teks lebih panjang:</p>
-    <textarea class="border p-2 rounded w-full h-24" placeholder="Write your message here..."></textarea>
+    <textarea class="border p-2 rounded w-full h-24 mb-4" placeholder="Write your message here..."></textarea>
 
     <p>Berikut ini adalah tombol:</p>
-    <button type="button" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Button Example</button>
+    <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Button Example</button>
     
     <p>Berikut adalah daftar:</p>
     
-    <ul class="list-disc pl-5">
+    <ul class="list-disc pl-5 space-y-2">
         <li>Item 1 dalam unordered list</li>
         <li>Item 2 dalam unordered list</li>
         <li>Item 3 dalam unordered list</li>
@@ -61,36 +60,64 @@
     
     <p>Daftar numerik:</p>
     
-    <ol class="list-decimal pl-5">
+    <ol class="list-decimal pl-5 space-y-2">
         <li>Item 1 dalam ordered list</li>
         <li>Item 2 dalam ordered list</li>
         <li>Item 3 dalam ordered list</li>
     </ol>
     
     <p>Berikut adalah tabel sederhana:</p>
-    <table class="min-w-full border-collapse border border-gray-300">
-        <thead>
+    <table class="min-w-full border border-gray-300">
+        <thead class="bg-gray-200">
             <tr>
-                <th class="border px-4 py-2">Header 1</th>
-                <th class="border px-4 py-2">Header 2</th>
+                <th class="border px-4 py-2 text-left">Header 1</th>
+                <th class="border px-4 py-2 text-left">Header 2</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr class="bg-white">
                 <td class="border px-4 py-2">Data 1</td>
                 <td class="border px-4 py-2">Data 2</td>
             </tr>
-            <tr>
+            <tr class="bg-gray-50">
                 <td class="border px-4 py-2">Data 3</td>
                 <td class="border px-4 py-2">Data 4</td>
             </tr>
         </tbody>
     </table>
 
-    <hr class="my-4">
+    <hr class="my-4 border-gray-300">
     <p>Horizontal rule di atas menggunakan <code>&lt;hr&gt;</code> untuk memisahkan konten.</p>
     
     <p>Berikut adalah gambar:</p>
-    <img src="https://via.placeholder.com/400x200" alt="Contoh Gambar" class="rounded">
+    <img src="https://via.placeholder.com/400x200" alt="Contoh Gambar" class="rounded shadow-lg mb-4">
+
+    <p>Berikut adalah alert sederhana menggunakan Tailwind:</p>
+    <div class="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded relative" role="alert">
+        <strong class="font-bold">Informasi!</strong>
+        <span class="block sm:inline">Ini adalah contoh alert sederhana.</span>
+    </div>
+
+    <p>Berikut adalah card sederhana:</p>
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+        <img class="rounded-t-lg" src="https://via.placeholder.com/400x200" alt="Card image">
+        <div class="p-5">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Card Title</h5>
+            <p class="mb-3 font-normal text-gray-700">This is a simple card example. You can add more content as needed.</p>
+            <a href="#" class="inline-flex items-center text-blue-600 hover:underline">Read more</a>
+        </div>
+    </div>
+
+    <p>Berikut adalah accordion atau collapsible component:</p>
+    <div class="w-full rounded-lg shadow-md bg-white">
+        <h2 class="mb-0">
+            <button class="w-full text-left text-gray-800 font-semibold px-4 py-2 focus:outline-none">
+                Accordion Title
+            </button>
+        </h2>
+        <div class="px-4 py-2 bg-gray-50">
+            <p class="text-gray-700">This is the content of the accordion. You can hide or show it as needed.</p>
+        </div>
+    </div>
 
 </div>
