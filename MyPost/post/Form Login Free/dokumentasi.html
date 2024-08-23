@@ -1,123 +1,268 @@
-<div class="post-title">Postt Dokumentasi</div>
+<div class="post-title">Postt Dokumentasi Lengkap</div>
 <div class="post-date">2024/08/23</div>
 <div class="post-author">Hirutshujj</div>
 <div class="post-content space-y-6">
-    <h1 class="text-4xl font-bold mb-4">Heading 1</h1>
-    <p>Heading 1 digunakan sebagai judul utama dalam sebuah postingan.</p>
-    
-    <h2 class="text-3xl font-semibold mb-4">Heading 2</h2>
-    <p>Heading 2 biasanya digunakan untuk subjudul atau bagian utama dalam konten.</p>
-    
-    <h3 class="text-2xl font-semibold mb-4">Heading 3</h3>
-    <p>Heading 3 sering digunakan untuk sub-bagian dari Heading 2.</p>
-    
-    <h4 class="text-xl font-semibold mb-4">Heading 4</h4>
-    <p>Heading 4 dapat digunakan untuk bagian yang lebih spesifik di dalam Heading 3.</p>
-    
-    <h5 class="text-lg font-semibold mb-4">Heading 5</h5>
-    <p>Heading 5 sering digunakan untuk detail yang lebih kecil atau tambahan informasi.</p>
-    
-    <h6 class="text-base font-semibold mb-4">Heading 6</h6>
-    <p>Heading 6 biasanya digunakan untuk teks yang ingin ditekankan tetapi tidak terlalu penting dalam hierarki.</p>
 
-    <p class="font-bold">Bold Text: Teks ini digunakan untuk penekanan atau sorotan penting.</p>
-    <p class="italic">Italic Text: Teks ini digunakan untuk penekanan dengan gaya miring.</p>
-    <p class="underline">Underlined Text: Teks ini digunakan dengan garis bawah untuk penekanan.</p>
-    <p>Ini adalah <mark class="bg-yellow-200">highlighted text</mark> menggunakan tag <code>&lt;mark&gt;</code>.</p>
+    <!-- Tab Container -->
+    <div class="tabs-container">
+        <!-- Tab Navigation -->
+        <div class="flex border-b border-gray-200 mb-4">
+            <button class="tab-button px-4 py-2 text-blue-600 border-b-2 border-blue-600 focus:outline-none" data-target="#result-tab">Result</button>
+            <button class="tab-button px-4 py-2 text-gray-600 hover:text-blue-600 focus:outline-none" data-target="#html-tab">HTML</button>
+        </div>
 
-    <p>Berikut ini adalah link: <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Klik di sini</a> untuk membuka halaman baru.</p>
-    
-    <blockquote class="border-l-4 border-blue-500 pl-4 italic text-gray-600">
-        "Ini adalah blockquote. Digunakan untuk menampilkan kutipan atau pernyataan khusus dari sumber lain."
-    </blockquote>
+        <!-- Tab Content -->
+        <div id="result-tab" class="tab-content p-4">
+            <!-- Result Content Here -->
 
-    <p class="mb-4">Ini adalah contoh paragraf dengan teks normal. Paragraf digunakan untuk menulis konten dalam bentuk teks yang lebih panjang.</p>
+            <!-- Headings -->
+            <h1 class="text-4xl font-bold mb-4">Heading 1</h1>
+            <h2 class="text-3xl font-semibold mb-4">Heading 2</h2>
+            <h3 class="text-2xl font-semibold mb-4">Heading 3</h3>
+            <h4 class="text-xl font-semibold mb-4">Heading 4</h4>
+            <h5 class="text-lg font-semibold mb-4">Heading 5</h5>
+            <h6 class="text-base font-semibold mb-4">Heading 6</h6>
 
-    <pre class="bg-gray-900 text-white p-4 rounded">
-        <code>
-            // Ini adalah contoh kode
-            const example = "Hello, world!";
-            console.log(example);
-        </code>
-    </pre>
+            <!-- Text Styles -->
+            <p class="font-bold">Bold Text: Teks ini digunakan untuk penekanan atau sorotan penting.</p>
+            <p class="italic">Italic Text: Teks ini digunakan untuk penekanan dengan gaya miring.</p>
+            <p class="underline">Underlined Text: Teks ini digunakan dengan garis bawah untuk penekanan.</p>
+            <p>Ini adalah <mark class="bg-yellow-200">highlighted text</mark> menggunakan tag <code>&lt;mark&gt;</code>.</p>
+            <p>Ini adalah <del>deleted text</del> dan <ins>inserted text</ins> menggunakan tag <code>&lt;del&gt;</code> dan <code>&lt;ins&gt;</code>.</p>
 
-    <p>Berikut ini adalah input field:</p>
-    <input type="text" placeholder="Enter your text here" class="border p-2 rounded w-full mb-4">
+            <!-- Links -->
+            <p>Berikut ini adalah link: <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Klik di sini</a> untuk membuka halaman baru.</p>
 
-    <p>Berikut ini adalah textarea untuk menulis teks lebih panjang:</p>
-    <textarea class="border p-2 rounded w-full h-24 mb-4" placeholder="Write your message here..."></textarea>
+            <!-- Blockquote -->
+            <blockquote class="border-l-4 border-blue-500 pl-4 italic text-gray-600 mb-4">
+                "Ini adalah blockquote. Digunakan untuk menampilkan kutipan atau pernyataan khusus dari sumber lain."
+            </blockquote>
 
-    <p>Berikut ini adalah tombol:</p>
-    <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Button Example</button>
-    
-    <p>Berikut adalah daftar:</p>
-    
-    <ul class="list-disc pl-5 space-y-2">
-        <li>Item 1 dalam unordered list</li>
-        <li>Item 2 dalam unordered list</li>
-        <li>Item 3 dalam unordered list</li>
-    </ul>
-    
-    <p>Daftar numerik:</p>
-    
-    <ol class="list-decimal pl-5 space-y-2">
-        <li>Item 1 dalam ordered list</li>
-        <li>Item 2 dalam ordered list</li>
-        <li>Item 3 dalam ordered list</li>
-    </ol>
-    
-    <p>Berikut adalah tabel sederhana:</p>
-    <table class="min-w-full border border-gray-300">
-        <thead class="bg-gray-200">
-            <tr>
-                <th class="border px-4 py-2 text-left">Header 1</th>
-                <th class="border px-4 py-2 text-left">Header 2</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="bg-white">
-                <td class="border px-4 py-2">Data 1</td>
-                <td class="border px-4 py-2">Data 2</td>
-            </tr>
-            <tr class="bg-gray-50">
-                <td class="border px-4 py-2">Data 3</td>
-                <td class="border px-4 py-2">Data 4</td>
-            </tr>
-        </tbody>
-    </table>
+            <!-- Code Block -->
+            <pre class="bg-gray-900 text-white p-4 rounded mb-4">
+                <code>// Ini adalah contoh kode
+const example = "Hello, world!";
+console.log(example);</code>
+            </pre>
 
-    <hr class="my-4 border-gray-300">
-    <p>Horizontal rule di atas menggunakan <code>&lt;hr&gt;</code> untuk memisahkan konten.</p>
-    
-    <p>Berikut adalah gambar:</p>
-    <img src="https://via.placeholder.com/400x200" alt="Contoh Gambar" class="rounded shadow-lg mb-4">
+            <!-- Form Elements -->
+            <p>Berikut ini adalah input field:</p>
+            <input type="text" placeholder="Enter your text here" class="border p-2 rounded w-full mb-4">
 
-    <p>Berikut adalah alert sederhana menggunakan Tailwind:</p>
-    <div class="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded relative" role="alert">
-        <strong class="font-bold">Informasi!</strong>
-        <span class="block sm:inline">Ini adalah contoh alert sederhana.</span>
-    </div>
+            <p>Berikut ini adalah textarea untuk menulis teks lebih panjang:</p>
+            <textarea class="border p-2 rounded w-full h-24 mb-4" placeholder="Write your message here..."></textarea>
 
-    <p>Berikut adalah card sederhana:</p>
-    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-        <img class="rounded-t-lg" src="https://via.placeholder.com/400x200" alt="Card image">
-        <div class="p-5">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Card Title</h5>
-            <p class="mb-3 font-normal text-gray-700">This is a simple card example. You can add more content as needed.</p>
-            <a href="#" class="inline-flex items-center text-blue-600 hover:underline">Read more</a>
+            <p>Berikut ini adalah tombol:</p>
+            <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mt-4">Button Example</button>
+
+            <!-- Lists -->
+            <p class="mt-4">Berikut adalah daftar:</p>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>Item 1 dalam unordered list</li>
+                <li>Item 2 dalam unordered list</li>
+                <li>Item 3 dalam unordered list</li>
+            </ul>
+
+            <p class="mt-4">Daftar numerik:</p>
+            <ol class="list-decimal pl-5 space-y-2">
+                <li>Item 1 dalam ordered list</li>
+                <li>Item 2 dalam ordered list</li>
+                <li>Item 3 dalam ordered list</li>
+            </ol>
+
+            <!-- Table -->
+            <p class="mt-4">Berikut adalah tabel sederhana:</p>
+            <table class="min-w-full border border-gray-300 mb-4">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="border px-4 py-2 text-left">Header 1</th>
+                        <th class="border px-4 py-2 text-left">Header 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-white">
+                        <td class="border px-4 py-2">Data 1</td>
+                        <td class="border px-4 py-2">Data 2</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                        <td class="border px-4 py-2">Data 3</td>
+                        <td class="border px-4 py-2">Data 4</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Horizontal Rule -->
+            <hr class="my-4 border-gray-300">
+
+            <!-- Image -->
+            <p>Berikut adalah gambar:</p>
+            <img src="https://via.placeholder.com/400x200" alt="Contoh Gambar" class="rounded shadow-lg mb-4">
+
+            <!-- Alert -->
+            <p>Berikut adalah alert sederhana menggunakan Tailwind:</p>
+            <div class="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded relative mb-4" role="alert">
+                <strong class="font-bold">Informasi!</strong>
+                <span class="block sm:inline">Ini adalah contoh alert sederhana.</span>
+            </div>
+
+            <!-- Card -->
+            <p>Berikut adalah card sederhana:</p>
+            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow mb-4">
+                <img class="rounded-t-lg" src="https://via.placeholder.com/400x200" alt="Card image">
+                <div class="p-5">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Card Title</h5>
+                    <p class="mb-3 font-normal text-gray-700">This is a simple card example. You can add more content as needed.</p>
+                    <a href="#" class="inline-flex items-center text-blue-600 hover:underline">Read more</a>
+                </div>
+            </div>
+
+            <!-- Accordion -->
+            <p>Berikut adalah accordion atau collapsible component:</p>
+            <div class="w-full rounded-lg shadow-md bg-white mb-4">
+                <h2 class="mb-0">
+                    <button class="accordion-button w-full text-left text-gray-800 font-semibold px-4 py-2 focus:outline-none">
+                        Accordion Title
+                    </button>
+                </h2>
+                <div class="accordion-content px-4 py-2 bg-gray-50 hidden">
+                    <p class="text-gray-700">This is the content of the accordion. You can hide or show it as needed.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- HTML Tab -->
+        <div id="html-tab" class="tab-content p-4 hidden">
+            <!-- HTML Content -->
+            <pre class="bg-gray-900 text-white p-4 rounded"><code class="language-html">
+&lt;h1 class=&quot;text-4xl font-bold mb-4&quot;&gt;Heading 1&lt;/h1&gt;
+&lt;h2 class=&quot;text-3xl font-semibold mb-4&quot;&gt;Heading 2&lt;/h2&gt;
+&lt;h3 class=&quot;text-2xl font-semibold mb-4&quot;&gt;Heading 3&lt;/h3&gt;
+&lt;h4 class=&quot;text-xl font-semibold mb-4&quot;&gt;Heading 4&lt;/h4&gt;
+&lt;h5 class=&quot;text-lg font-semibold mb-4&quot;&gt;Heading 5&lt;/h5&gt;
+&lt;h6 class=&quot;text-base font-semibold mb-4&quot;&gt;Heading 6&lt;/h6&gt;
+
+&lt;p class=&quot;font-bold&quot;&gt;Bold Text: Teks ini digunakan untuk penekanan atau sorotan penting.&lt;/p&gt;
+&lt;p class=&quot;italic&quot;&gt;Italic Text: Teks ini digunakan untuk penekanan dengan gaya miring.&lt;/p&gt;
+&lt;p class=&quot;underline&quot;&gt;Underlined Text: Teks ini digunakan dengan garis bawah untuk penekanan.&lt;/p&gt;
+&lt;p&gt;Ini adalah &lt;mark class=&quot;bg-yellow-200&quot;&gt;highlighted text&lt;/mark&gt; menggunakan tag &lt;code&gt;&amp;lt;mark&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Ini adalah &lt;del&gt;deleted text&lt;/del&gt; dan &lt;ins&gt;inserted text&lt;/ins&gt; menggunakan tag &lt;code&gt;&amp;lt;del&amp;gt;&lt;/code&gt; dan &lt;code&gt;&amp;lt;ins&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini adalah link: &lt;a href=&quot;https://example.com&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; class=&quot;text-blue-500 hover:underline&quot;&gt;Klik di sini&lt;/a&gt; untuk membuka halaman baru.&lt;/p&gt;
+
+&lt;blockquote class=&quot;border-l-4 border-blue-500 pl-4 italic text-gray-600 mb-4&quot;&gt;
+    &quot;Ini adalah blockquote. Digunakan untuk menampilkan kutipan atau pernyataan khusus dari sumber lain.&quot;
+&lt;/blockquote&gt;
+
+&lt;pre class=&quot;bg-gray-900 text-white p-4 rounded mb-4&quot;&gt;
+    &lt;code&gt;// Ini adalah contoh kode
+const example = &quot;Hello, world!&quot;;
+console.log(example);&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Berikut ini adalah input field:&lt;/p&gt;
+&lt;input type=&quot;text&quot; placeholder=&quot;Enter your text here&quot; class=&quot;border p-2 rounded w-full mb-4&quot;&gt;
+
+&lt;p&gt;Berikut ini adalah textarea untuk menulis teks lebih panjang:&lt;/p&gt;
+&lt;textarea class=&quot;border p-2 rounded w-full h-24 mb-4&quot; placeholder=&quot;Write your message here...&quot;&gt;&lt;/textarea&gt;
+
+&lt;p&gt;Berikut ini adalah tombol:&lt;/p&gt;
+&lt;button type=&quot;button&quot; class=&quot;bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mt-4&quot;&gt;Button Example&lt;/button&gt;
+
+&lt;p class=&quot;mt-4&quot;&gt;Berikut adalah daftar:&lt;/p&gt;
+&lt;ul class=&quot;list-disc pl-5 space-y-2&quot;&gt;
+    &lt;li&gt;Item 1 dalam unordered list&lt;/li&gt;
+    &lt;li&gt;Item 2 dalam unordered list&lt;/li&gt;
+    &lt;li&gt;Item 3 dalam unordered list&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;mt-4&quot;&gt;Daftar numerik:&lt;/p&gt;
+&lt;ol class=&quot;list-decimal pl-5 space-y-2&quot;&gt;
+    &lt;li&gt;Item 1 dalam ordered list&lt;/li&gt;
+    &lt;li&gt;Item 2 dalam ordered list&lt;/li&gt;
+    &lt;li&gt;Item 3 dalam ordered list&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p class=&quot;mt-4&quot;&gt;Berikut adalah tabel sederhana:&lt;/p&gt;
+&lt;table class=&quot;min-w-full border border-gray-300 mb-4&quot;&gt;
+    &lt;thead class=&quot;bg-gray-200&quot;&gt;
+        &lt;tr&gt;
+            &lt;th class=&quot;border px-4 py-2 text-left&quot;&gt;Header 1&lt;/th&gt;
+            &lt;th class=&quot;border px-4 py-2 text-left&quot;&gt;Header 2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr class=&quot;bg-white&quot;&gt;
+            &lt;td class=&quot;border px-4 py-2&quot;&gt;Data 1&lt;/td&gt;
+            &lt;td class=&quot;border px-4 py-2&quot;&gt;Data 2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;bg-gray-50&quot;&gt;
+            &lt;td class=&quot;border px-4 py-2&quot;&gt;Data 3&lt;/td&gt;
+            &lt;td class=&quot;border px-4 py-2&quot;&gt;Data 4&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr class=&quot;my-4 border-gray-300&quot;&gt;
+
+&lt;p&gt;Berikut adalah gambar:&lt;/p&gt;
+&lt;img src=&quot;https://via.placeholder.com/400x200&quot; alt=&quot;Contoh Gambar&quot; class=&quot;rounded shadow-lg mb-4&quot;&gt;
+
+&lt;p&gt;Berikut adalah alert sederhana menggunakan Tailwind:&lt;/p&gt;
+&lt;div class=&quot;bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded relative mb-4&quot; role=&quot;alert&quot;&gt;
+    &lt;strong class=&quot;font-bold&quot;&gt;Informasi!&lt;/strong&gt;
+    &lt;span class=&quot;block sm:inline&quot;&gt;Ini adalah contoh alert sederhana.&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Berikut adalah card sederhana:&lt;/p&gt;
+&lt;div class=&quot;max-w-sm bg-white border border-gray-200 rounded-lg shadow mb-4&quot;&gt;
+    &lt;img class=&quot;rounded-t-lg&quot; src=&quot;https://via.placeholder.com/400x200&quot; alt=&quot;Card image&quot;&gt;
+    &lt;div class=&quot;p-5&quot;&gt;
+        &lt;h5 class=&quot;mb-2 text-2xl font-bold tracking-tight text-gray-900&quot;&gt;Card Title&lt;/h5&gt;
+        &lt;p class=&quot;mb-3 font-normal text-gray-700&quot;&gt;This is a simple card example. You can add more content as needed.&lt;/p&gt;
+        &lt;a href=&quot;#&quot; class=&quot;inline-flex items-center text-blue-600 hover:underline&quot;&gt;Read more&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Berikut adalah accordion atau collapsible component:&lt;/p&gt;
+&lt;div class=&quot;w-full rounded-lg shadow-md bg-white mb-4&quot;&gt;
+    &lt;h2 class=&quot;mb-0&quot;&gt;
+        &lt;button class=&quot;accordion-button w-full text-left text-gray-800 font-semibold px-4 py-2 focus:outline-none&quot;&gt;
+            Accordion Title
+        &lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div class=&quot;accordion-content px-4 py-2 bg-gray-50 hidden&quot;&gt;
+        &lt;p class=&quot;text-gray-700&quot;&gt;This is the content of the accordion. You can hide or show it as needed.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
         </div>
     </div>
-
-    <p>Berikut adalah accordion atau collapsible component:</p>
-    <div class="w-full rounded-lg shadow-md bg-white">
-        <h2 class="mb-0">
-            <button class="w-full text-left text-gray-800 font-semibold px-4 py-2 focus:outline-none">
-                Accordion Title
-            </button>
-        </h2>
-        <div class="px-4 py-2 bg-gray-50">
-            <p class="text-gray-700">This is the content of the accordion. You can hide or show it as needed.</p>
-        </div>
-    </div>
-
 </div>
+
+<script>
+    // JavaScript for Tab Functionality
+    document.querySelectorAll('.tab-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const target = button.getAttribute('data-target');
+
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+            // Remove active state from all buttons
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('text-blue-600', 'border-blue-600'));
+            
+            // Show selected tab
+            document.querySelector(target).classList.remove('hidden');
+            // Set active state to the clicked button
+            button.classList.add('text-blue-600', 'border-blue-600');
+        });
+    });
+
+    // JavaScript for Accordion
+    document.querySelectorAll('.accordion-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.parentElement.nextElementSibling;
+            content.classList.toggle('hidden');
+        });
+    });
+</script>
