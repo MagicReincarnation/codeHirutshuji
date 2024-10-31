@@ -126,7 +126,7 @@ function playEpisode(e) {
           }
         })
       })
-    } else console.error("Episode Data not found.")
+    } else console.error("Episode not found.")
   }).catch(e => {
     console.error("Error retrieving series data:", e)
   })
@@ -214,7 +214,7 @@ function decrypt_episodeId(e, r) {
   return xorEncryptDecrypt(atob(e), r)
 }
 async function loadContent() {
-  await getUserRole(), document.getElementById("player_loader_HIRU08082024").style.display = "block";
+  document.getElementById("player_loader_HIRU08082024").style.display = "block";
   let e = streamAnime_HR08082024.IDSeries,
     r = auth.currentUser ? auth.currentUser.uid : null;
   r || console.error("User not logged in"), dbrl.ref("series/" + e).once("value").then(async i => {
@@ -517,6 +517,7 @@ function convertToEmbedUrl(e) {
 auth.onAuthStateChanged(e => {
   loadContent()
 });
+
 let userRole;
 async function getUserRole() {
   let e = auth.currentUser ? auth.currentUser.uid : null;
@@ -524,10 +525,10 @@ async function getUserRole() {
     let r = await db.collection("users").doc(e).get();
     if (r.exists) return userRole = r.data().role, console.log("user role: ", userRole), userRole
   } catch (i) {
-    console.error("Error fetching user role: ", i)
+    console.error("Error getrole: ", i)
   }
 }
-
+getUserRole();
 function akses_role_HR() {
   return {
     Admin: ["Admin", "Member", "User"],
