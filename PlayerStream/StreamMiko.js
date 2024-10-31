@@ -515,8 +515,10 @@ function convertToEmbedUrl(e) {
   return r && 11 === r[2].length ? `https://www.youtube.com/embed/${r[2]}?autoplay=1` : null
 }
 auth.onAuthStateChanged(e => {
-  loadContent()
+  loadContent(),
+  getUserRole()
 });
+
 let userRole;
 async function getUserRole() {
   let e = auth.currentUser ? auth.currentUser.uid : null;
@@ -527,7 +529,7 @@ async function getUserRole() {
     console.error("Error get user role: ", i)
   }
 }
-getUserRole();
+
 function akses_role_HR() {
   return {
     Admin: ["Admin", "Member", "User"],
@@ -536,6 +538,9 @@ function akses_role_HR() {
   }
 }
 async function canAccessPremium(e) {
+  if(!userRole){
+  getUserRole();
+  }
   let r = akses_role_HR();
   return r[userRole]?.includes(e)
 }
