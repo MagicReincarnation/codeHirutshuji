@@ -126,7 +126,7 @@ function playEpisode(e) {
           }
         })
       })
-    } else console.error("Episode not found.")
+    } else console.error("Episode Data not found.")
   }).catch(e => {
     console.error("Error retrieving series data:", e)
   })
@@ -517,15 +517,14 @@ function convertToEmbedUrl(e) {
 auth.onAuthStateChanged(e => {
   loadContent()
 });
-
 let userRole;
 async function getUserRole() {
   let e = auth.currentUser ? auth.currentUser.uid : null;
   if (e) try {
     let r = await db.collection("users").doc(e).get();
-    if (r.exists) return userRole = r.data().role, console.log("user role: ", userRole), userRole
+    if (r.exists) return userRole = r.data().role,    	 console.log("user role: ", userRole), userRole
   } catch (i) {
-    console.error("Error getrole: ", i)
+    console.error("Error get user role: ", i)
   }
 }
 getUserRole();
@@ -533,11 +532,10 @@ function akses_role_HR() {
   return {
     Admin: ["Admin", "Member", "User"],
     Member: ["Member", "User"],
-    User: ["User"]
+    User: ["User", "Member"]
   }
 }
-
-function canAccessPremium(e) {
+async function canAccessPremium(e) {
   let r = akses_role_HR();
   return r[userRole]?.includes(e)
 }
