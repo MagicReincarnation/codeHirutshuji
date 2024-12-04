@@ -40,26 +40,86 @@ const resourceConfig = [
     }
 ];
 
-    function addResources(config) {
-    config.forEach(resource => {
-        let element = resource.t === "link" ? document.createElement("link") : resource.t === "script" ? document.createElement("script") : null;
-        if (!element) return;
-
-        // Menambahkan atribut dari objek konfigurasi kecuali "t" dan "loc"
-        Object.keys(resource).forEach(attribute => {
-            if (attribute !== "t" && attribute !== "loc") {
-                // Jika nilai atribut adalah boolean true, tambahkan atribut tersebut
-                if (resource[attribute] === true) {
-                    element.setAttribute(attribute, attribute);  // Menambahkan atribut seperti "async" atau "defer"
-                } else if (resource[attribute] !== false && resource[attribute] !== undefined) {
-                    // Jika ada nilai selain false atau undefined, set atributnya
-                    element.setAttribute(attribute, resource[attribute]);
-                }
-            }
-        });
-
-        // Menambahkan elemen ke body atau head
-        (resource.loc === "body" ? document.body : document.head).appendChild(element);
-    });
+async function addResources(config) {
+    for (const resource of config) {
+        if (resource.t === "script") {
+            await handleScriptCaching(resource);
+        } else {
+            addElement(resource);
+        }
+    }
 }
+
+async function handleScriptCaching(resource) {
+    const cacheKey = `cached-${resource.src}`;
+    const versionKey = `version-${resource.src}`;
+    const currentVersion = resource.version || "1.0.0";
+
+    // Cek cache dan versi
+    const cachedScript = localStorage.getItem(cacheKey);
+    const cachedVersion = localStorage.getItem(versionKey);
+
+    if (cachedScript && cachedVersion === currentVersion) {
+        console.log(`Memuat ${resource.name} dari cache...`);
+        injectScript(cachedScript, resource);
+    } else {
+        console.log(`Memuat ${resource.name} dari jaringan...`);
+        try {
+            const response = await fetch(resource.src);
+            const scriptContent = await response.text();
+
+            // Simpan ke cache
+            localStorage.setItem(cacheKey, scriptContent);
+            localStorage.setItem(versionKey, currentVersion);
+
+            // Inject script
+            injectScript(scriptContent, resource);
+        } catch (error) {
+            console.error(`Gagal memuat ${resource.name}:`, error);
+        }
+    }
+}
+
+function injectScript(content, resource) {
+    const script = document.createElement("script");
+    script.type = resource.type || "text/javascript";
+
+    // Menambahkan atribut lain (async, defer, dll.)
+    Object.keys(resource).forEach(attribute => {
+        if (attribute !== "t" && attribute !== "loc" && attribute !== "src" && attribute !== "version") {
+            if (resource[attribute] === true) {
+                script.setAttribute(attribute, attribute);
+            } else if (resource[attribute] !== false && resource[attribute] !== undefined) {
+                script.setAttribute(attribute, resource[attribute]);
+            }
+        }
+    });
+
+    // Tambahkan isi script
+    script.textContent = content;
+
+    // Tambahkan ke lokasi yang ditentukan (head/body)
+    (resource.loc === "body" ? document.body : document.head).appendChild(script);
+}
+
+function addElement(resource) {
+    let element = resource.t === "link" ? document.createElement("link") : null;
+    if (!element) return;
+
+    // Menambahkan atribut
+    Object.keys(resource).forEach(attribute => {
+        if (attribute !== "t" && attribute !== "loc") {
+            if (resource[attribute] === true) {
+                element.setAttribute(attribute, attribute);
+            } else if (resource[attribute] !== false && resource[attribute] !== undefined) {
+                element.setAttribute(attribute, resource[attribute]);
+            }
+        }
+    });
+
+    // Tambahkan ke lokasi yang ditentukan (head/body)
+    (resource.loc === "body" ? document.body : document.head).appendChild(element);
+}
+
+// Panggil fungsi
 addResources(resourceConfig);
