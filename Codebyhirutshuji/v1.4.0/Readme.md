@@ -21,3 +21,7 @@
 
 
 5. Optimalisasi: Meningkatkan efisiensi kode CheckMembership agar tidak mengalami masalah yang sama dengan autoFree.
+
+6. Perbaikan Bug: Login tidak redirect ke profile ketika berhasil login.
+  
+7. Perbaikan Bug: Custom profile pada profile header tidak bekerja.
